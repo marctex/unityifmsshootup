@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 6473789070448565863}
   - component: {fileID: 9123205429165116775}
   - component: {fileID: 2835526785843361212}
+  - component: {fileID: 5812716797623082000}
+  - component: {fileID: -427869981721527499}
   m_Layer: 0
   m_Name: inimigo1
   m_TagString: Untagged
@@ -127,9 +129,36 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &5812716797623082000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658035351413243356}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e052125043868634f98d250e315367de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: {x: 0, y: -2}
+--- !u!114 &-427869981721527499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658035351413243356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce1e153eed06fc74eb94f440846f4f3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 2924080519432026027, guid: 7742c08c94e12834f95a97662918b9a0, type: 3}
+  speed: 3
