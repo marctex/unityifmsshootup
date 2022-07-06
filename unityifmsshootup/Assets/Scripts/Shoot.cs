@@ -5,14 +5,15 @@ using UnityEngine;
 public class Shoot : MonoBehaviour
 {
     public GameObject explode;
+    public string alvo;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D col)
     {
-        if (collision.name.StartsWith("inimigo"))
+        if (col.name.StartsWith(alvo))
         {
-            Vector3 pos = collision.transform.position;
+            Vector3 pos = col.transform.position;
             GameObject clone = (GameObject)Instantiate(explode, pos, Quaternion.identity);
-            Destroy(collision.gameObject);
+            Destroy(col.gameObject);
             Destroy(this.gameObject);
             Destroy(clone, 0.05f);
         }

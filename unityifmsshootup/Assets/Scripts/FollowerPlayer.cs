@@ -14,8 +14,14 @@ public class FollowerPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 pos = target.transform.position - this.transform.position;
-        Vector3 velo = pos.normalized * speed;
-        this.transform.Translate(velo * Time.deltaTime);       
+        if(target)
+        {
+            Vector3 pos = target.transform.position - this.transform.position;
+            Vector3 velo = pos.normalized * speed;
+            this.transform.Translate(velo * Time.deltaTime);
+        }
+           
     }
+
+
 }
