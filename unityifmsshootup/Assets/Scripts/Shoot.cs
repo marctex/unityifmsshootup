@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class Shoot : MonoBehaviour
 {
     public GameObject explode;
-    public string alvo;
+    public string alvo;        
 
     private void OnTriggerEnter2D(Collider2D col)
     {

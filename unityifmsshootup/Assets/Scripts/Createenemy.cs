@@ -18,9 +18,5 @@ public class Createenemy : MonoBehaviour
         Vector3 pos = this.transform.position + Vector3.Lerp(-range, range, Random.value);
         Instantiate(prefab, pos, Quaternion.identity);
     }
-    // Update is called once per frame
-    void Update()
-    {
         
-    }
 }

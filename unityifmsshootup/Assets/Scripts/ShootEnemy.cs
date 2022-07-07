@@ -14,8 +14,5 @@ public class ShootEnemy : MonoBehaviour
     {
         Instantiate(shoot, this.transform.position, Quaternion.identity);
     }
-    void Update()
-    {
-        
-    }
+   
 }
