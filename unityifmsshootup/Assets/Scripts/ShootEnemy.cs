@@ -13,6 +13,5 @@ public class ShootEnemy : MonoBehaviour
     void Disparar()
     {
         Instantiate(shoot, this.transform.position, Quaternion.identity);
-    }
-   
+    }   
 }

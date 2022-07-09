@@ -1,20 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.UI;
+//using UnityEngine.UI;
 using UnityEngine;
 
 public class Shoot : MonoBehaviour
 {
     public GameObject explode;
-    public string alvo;        
+    public string alvo;
+    ScoreManager score;
 
-    private void OnTriggerEnter2D(Collider2D col)
+    public void Awake()
     {
-        if (col.name.StartsWith(alvo))
+        score = GameObject.FindGameObjectWithTag("Score").GetComponent<ScoreManager>();
+    }
+
+    private void OnTriggerEnter2D(Collider2D collider2D)
+    {
+        if (collider2D.name.StartsWith(alvo))
         {
-            Vector3 pos = col.transform.position;
+            Vector3 pos = collider2D.transform.position;
             GameObject clone = (GameObject)Instantiate(explode, pos, Quaternion.identity);
-            Destroy(col.gameObject);
+            Score.Pontuar();
+            Destroy(collider2D.gameObject);
             Destroy(this.gameObject);
             Destroy(clone, 0.05f);
         }
