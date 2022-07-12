@@ -5,16 +5,12 @@ using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
-    public Text scoreText;
-    int score = 0;
-    void Start()
-    {
-        scoreText.text = score.ToString() + " POINTS";
-    }
-
+    public Text score;
+    public int contador;
+    
    public void Pontuar()
     {
-        score += 1;
-        scoreText.text = score.ToString() + " POINTS";
+        contador += 1;
+        score.text = contador.ToString() + " POINTS";
     }
 }

@@ -20,7 +20,7 @@ public class Shoot : MonoBehaviour
         {
             Vector3 pos = collider2D.transform.position;
             GameObject clone = (GameObject)Instantiate(explode, pos, Quaternion.identity);
-            Score.Pontuar();
+            score.Pontuar();
             Destroy(collider2D.gameObject);
             Destroy(this.gameObject);
             Destroy(clone, 0.05f);
