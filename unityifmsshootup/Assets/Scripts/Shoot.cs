@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
-//using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Shoot : MonoBehaviour
 {
@@ -24,6 +24,10 @@ public class Shoot : MonoBehaviour
             Destroy(collider2D.gameObject);
             Destroy(this.gameObject);
             Destroy(clone, 0.05f);
+            if (collider2D.name.StartsWith("Player"))
+            {
+                SceneManager.LoadScene(2);
+            }
         }
     }
 }
